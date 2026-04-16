@@ -4,7 +4,7 @@
 
 | Parameter            | Value                                                                    |
 | -------------------- | ------------------------------------------------------------------------ |
-| Chain Info           | [See network details here](https://github.com/elys-network/networks)     |
+| Chain Info           | [See network details here](https://github.com/tirixa-hub/networks)     |
 | Denomination         | uelys                                                                    |
 | Decimals             | 6 (1 elys= 1000000uelys)                                                 |
 | Version              | v6.4.0                                                                   |
@@ -29,7 +29,7 @@ This guide provides instructions on how to spin up a new localnet using the Elys
    First, clone the Elys repository to your local machine:
 
    ```bash
-   git clone https://github.com/elys-network/elys.git
+   git clone https://github.com/tirixa-hub/UO-elys-hul.git
    ```
 
 2. **Build the Binary**
@@ -70,7 +70,7 @@ This section provides a step-by-step guide on how to build the Elys Chain binary
 1. Clone the Elys chain repository:
 
 ```bash
-git clone https://github.com/elys-network/elys.git
+git clone https://github.com/tirixa-hub/UO-elys-hul.git
 ```
 
 2. Navigate to the cloned repository:
@@ -110,14 +110,6 @@ Ensure that you have RocksDB installed on your machine. On Ubuntu, you can insta
 ```bash
 # set rocks db version
 ROCKSDB_VERSION=8.9.1
-
-# install rocks db dependencies
-sudo apt install -y libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev
-
-# download and extract on /tmp
-cd /tmp
-wget https://github.com/facebook/rocksdb/archive/refs/tags/v${ROCKSDB_VERSION}.tar.gz
-tar -xvf v${ROCKSDB_VERSION}.tar.gz && cd rocksdb-${ROCKSDB_VERSION} || return
 
 # build rocks db
 export CXXFLAGS='-Wno-error=deprecated-copy -Wno-error=pessimizing-move -Wno-error=class-memaccess'
